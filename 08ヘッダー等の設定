@@ -1,0 +1,54 @@
+NSEW
+
+    Range("L1").Select
+    ActiveCell.FormulaR1C1 = "Area"
+    Range("K1").Select
+    ActiveCell.FormulaR1C1 = "Year"
+    Range("J1").Select
+    ActiveCell.FormulaR1C1 = "Structure"
+    Range("I1").Select
+    ActiveCell.FormulaR1C1 = "Walk"
+    Range("H1").Select
+    ActiveCell.FormulaR1C1 = "Parking"
+    Range("G1").Select
+    ActiveCell.FormulaR1C1 = "Management fee"
+    Range("F1").Select
+    ActiveCell.FormulaR1C1 = "Amortization"
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "Key money"
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "Deposit1"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "Deposit2"
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "Rent"
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "Number"
+
+End Sub
+
+
+
+Sub マクロ_抽出から出力()
+'
+' マクロ_抽出から出力 Macro
+'
+
+'
+    Sheets("抽出").Select
+    
+    Range("A4:KC3400").Select
+    Range("B7").Activate
+    Selection.Copy
+        Sheets.Add After:=ActiveSheet
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    
+    Range("A1").Select
+    
+    Sheets("Sheet1").Select
+    Sheets("Sheet1").Name = "csv出力"
+    Range("A1").Select
+
+End Sub
+
