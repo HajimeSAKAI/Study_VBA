@@ -1,0 +1,77 @@
+Sub 処理2()
+'
+' 処理2 Macro
+'
+' Keyboard Shortcut: Ctrl+r
+'
+    Sheets("処理例 (2)").Select
+    
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "=処理例!RC"
+    
+    Range("A1").Select
+    Selection.AutoFill Destination:=Range("A1:Q1"), Type:=xlFillDefault
+    Range("A1:Q1").Select
+    
+    Range("A2").Select
+    ActiveCell.FormulaR1C1 = "=処理例!RC"
+    Range("B2").Select
+    ActiveCell.FormulaR1C1 = "=処理例!RC"
+    
+    Range("C2").Select
+    ActiveCell.FormulaR1C1 = "=VALUE(SUBSTITUTE(処理例!RC,""万円"",""""))*10000"
+    Range("D2").Select
+    ActiveCell.FormulaR1C1 = "=VALUE(SUBSTITUTE(処理例!RC,""万円"",""""))*10000"
+    Range("E2").Select
+    ActiveCell.FormulaR1C1 = "=VALUE(SUBSTITUTE(処理例!RC,""万円"",""""))*10000"
+    Range("F2").Select
+    ActiveCell.FormulaR1C1 = "=VALUE(SUBSTITUTE(処理例!RC,""万円"",""""))*10000"
+    Range("G2").Select
+    ActiveCell.FormulaR1C1 = "=VALUE(SUBSTITUTE(処理例!RC,""万円"",""""))*10000"
+    
+    Range("H2").Select
+    ActiveCell.FormulaR1C1 = "=LEFT(処理例!RC,FIND(""円"",処理例!RC)-1)"
+    Range("I2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IFERROR(IF(SEARCH(""m"",処理例!RC),MID(処理例!RC,FIND(""m"",処理例!RC)+1,FIND(""円"",処理例!RC)-1-FIND(""m"",処理例!RC))),LEFT(処理例!RC,FIND(""円"",処理例!RC)-1))"
+
+    Range("J2").Select
+    ActiveCell.FormulaR1C1 = "=処理例!RC"
+    
+    Range("K2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=MID(処理例!RC,FIND(""歩"",処理例!RC)+1,FIND(""分"",処理例!RC)-1-FIND(""歩"",処理例!RC))"
+    Range("L2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=MID(処理例!RC,FIND(""歩"",処理例!RC)+1,FIND(""分"",処理例!RC)-1-FIND(""歩"",処理例!RC))"
+                
+    Range("M2").Select
+    ActiveCell.FormulaR1C1 = "=処理例!RC"
+    Range("N2").Select
+    ActiveCell.FormulaR1C1 = "=処理例!RC"
+    Range("O2").Select
+    ActiveCell.FormulaR1C1 = "=処理例!RC"
+    Range("P2").Select
+    ActiveCell.FormulaR1C1 = "=処理例!RC"
+    
+    Range("Q2").Select
+    ActiveCell.FormulaR1C1 = "=MATCH(処理例!RC,用語!R4C11:R12C11)"
+        
+    Range("A1:Q2").Select
+    Selection.Cut Destination:=Range("B1:R2")
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "駅番号"
+    ActiveCell.Characters(1, 1).PhoneticCharacters = "エキ"
+    ActiveCell.Characters(2, 2).PhoneticCharacters = "バンゴウ"
+    Range("A2").Select
+    ActiveCell.FormulaR1C1 = "=MATCH(RC[1],用語!R4C3:R19C3,0)"
+    
+    Range("R2").Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range("A2:R3400").Select
+    Range("R2").Activate
+    
+    Selection.DataSeries Rowcol:=xlColumns, Type:=xlAutoFill, Date:=xlDay, _
+        Trend:=False
+        
+End Sub
