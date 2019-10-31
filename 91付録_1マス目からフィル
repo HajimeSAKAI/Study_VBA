@@ -1,0 +1,12 @@
+Sub 抽出フィル3400()
+'
+' 抽出フィル Macro
+'
+'
+    Range("A2").Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range("A2:Q3400").Select
+    
+    Selection.DataSeries Rowcol:=xlColumns, Type:=xlAutoFill, Date:=xlDay, _
+        Trend:=False
+End Sub
