@@ -1,0 +1,85 @@
+Sub 色塗りマクロ→縦に移動するマクロ()
+'
+' 色塗りマクロ→縦に移動するマクロ Macro
+'
+'1行目は既に存在します。
+'2
+    Range("O1:AA14").Select
+    Selection.Cut
+    Range("B15").Select
+    ActiveSheet.Paste
+'3
+    Range("AB1:AN14").Select
+    Selection.Cut
+    Range("B29").Select
+    ActiveSheet.Paste
+'4
+    Range("AO1:BA14").Select
+    Selection.Cut
+    ActiveWindow.LargeScroll ToRight:=-1
+    Range("B43").Select
+    ActiveSheet.Paste
+'5
+    Range("BB1:BN14").Select
+    Selection.Cut
+    Range("B57").Select
+    ActiveSheet.Paste
+'6
+    Range("BO1:CA14").Select
+    Selection.Cut
+    Range("B71").Select
+    ActiveSheet.Paste
+'7
+    Range("CB1:CN14").Select
+    Selection.Cut
+    Range("B85").Select
+    ActiveSheet.Paste
+'8
+    Range("CO1:DA14").Select
+    Selection.Cut
+    Range("B99").Select
+    ActiveSheet.Paste
+'9
+    Range("DB1:DN14").Select
+    Selection.Cut
+    Range("B113").Select
+    ActiveSheet.Paste
+'10
+    Range("DO1:EA14").Select
+    Selection.Cut
+    Range("B127").Select
+    ActiveSheet.Paste
+'11
+    Range("EB1:EN14").Select
+    Selection.Cut
+    Range("B141").Select
+    ActiveSheet.Paste
+'12
+    Range("EO1:FA14").Select
+    Selection.Cut
+    Range("B155").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+'13
+    Range("EO1:FA14").Select
+    Application.CutCopyMode = False
+    Selection.Cut
+    Range("B155").Select
+    ActiveSheet.Paste
+'14
+    Range("FB1:FN14").Select
+    Selection.Cut
+    Range("B169").Select
+    ActiveSheet.Paste
+'15
+    Range("N182").Select
+    ActiveWindow.SmallScroll Down:=-147
+    
+'タイトル挿入
+    Range("A1:A14").Select
+    Selection.AutoFill Destination:=Range("A1:A182"), Type:=xlFillDefault
+    Range("A1:A182").Select
+    ActiveWindow.SmallScroll Down:=-24
+    Range("A182").Select
+    
+End Sub
