@@ -1,0 +1,245 @@
+Sub 処理1()
+'
+' a Macro
+'
+' Keyboard Shortcut: Ctrl+shift+z
+'
+    Sheets("a").Select
+    Sheets("a").Name = "オリジナルデータ"
+    Sheets.Add After:=ActiveSheet
+    Sheets("Sheet1").Name = "処理例"
+    Sheets("処理例").Select
+    Sheets("処理例").Copy After:=Sheets(2)
+    Sheets("処理例 (2)").Select
+    Sheets("処理例 (2)").Copy After:=Sheets(3)
+    Sheets("処理例 (3)").Select
+    Sheets("処理例 (3)").Copy After:=Sheets(4)
+    Sheets("処理例 (3)").Select
+    Sheets("処理例 (3)").Name = "抽出"
+    Sheets("処理例 (4)").Select
+    Sheets("処理例 (4)").Name = "用語"
+    
+    Range("B3").Select
+    ActiveCell.FormulaR1C1 = "番号"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "バンゴウ"
+    Range("B4").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("B5").Select
+    ActiveCell.FormulaR1C1 = "2"
+    Range("B6").Select
+    ActiveCell.FormulaR1C1 = "3"
+    Range("B4:B6").Select
+    Selection.AutoFill Destination:=Range("B4:B19"), Type:=xlFillDefault
+    Range("B4:B19").Select
+    Range("C4").Select
+    ActiveCell.FormulaR1C1 = "駅名"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "エキメイ"
+    Range("C4").Select
+    ActiveCell.FormulaR1C1 = "豊橋駅"
+    ActiveCell.Characters(1, 3).PhoneticCharacters = "トヨハシエキ"
+    Range("C5").Select
+    ActiveCell.FormulaR1C1 = "柳生橋駅"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ヤギュウ"
+    ActiveCell.Characters(3, 1).PhoneticCharacters = "バシ"
+    ActiveCell.Characters(4, 1).PhoneticCharacters = "エキ"
+    Range("C6").Select
+    ActiveCell.FormulaR1C1 = "小池駅"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "コイケ"
+    ActiveCell.Characters(3, 1).PhoneticCharacters = "エキ"
+    Range("C7").Select
+    ActiveCell.FormulaR1C1 = "愛知大学前駅"
+    ActiveCell.Characters(1, 5).PhoneticCharacters = "アイチダイガクマエ"
+    ActiveCell.Characters(6, 1).PhoneticCharacters = "エキ"
+    Range("C8").Select
+    ActiveCell.FormulaR1C1 = "南栄駅"
+    ActiveCell.Characters(1, 3).PhoneticCharacters = "ミナミサカエエキ"
+    Range("C9").Select
+    ActiveCell.FormulaR1C1 = "高師駅"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "タカシ"
+    ActiveCell.Characters(3, 1).PhoneticCharacters = "エキ"
+    Range("C10").Select
+    ActiveCell.FormulaR1C1 = "芦原駅"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "アシハラ"
+    ActiveCell.Characters(3, 1).PhoneticCharacters = "エキ"
+    Range("C11").Select
+    ActiveCell.FormulaR1C1 = "植田駅"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ウエタ"
+    ActiveCell.Characters(3, 1).PhoneticCharacters = "エキ"
+    Range("C12").Select
+    ActiveCell.FormulaR1C1 = "向ヶ丘駅"
+    ActiveCell.Characters(1, 4).PhoneticCharacters = "ムコウガオカエキ"
+    Range("C13").Select
+    ActiveCell.FormulaR1C1 = "大清水駅"
+    ActiveCell.Characters(1, 3).PhoneticCharacters = "オオシミズ"
+    ActiveCell.Characters(4, 1).PhoneticCharacters = "エキ"
+    Range("C14").Select
+    ActiveCell.FormulaR1C1 = "老津駅"
+    ActiveCell.Characters(1, 3).PhoneticCharacters = "オイツエキ"
+    Range("C15").Select
+    ActiveCell.FormulaR1C1 = "杉山駅"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "スギヤマ"
+    ActiveCell.Characters(3, 1).PhoneticCharacters = "エキ"
+    Range("C16").Select
+    ActiveCell.FormulaR1C1 = "やぐま台駅"
+    ActiveCell.Characters(4, 2).PhoneticCharacters = "ダイエキ"
+    Range("C17").Select
+    ActiveCell.FormulaR1C1 = "豊島駅"
+    ActiveCell.Characters(1, 3).PhoneticCharacters = "トシマエキ"
+    Range("C18").Select
+    ActiveCell.FormulaR1C1 = "神戸駅"
+    ActiveCell.Characters(1, 3).PhoneticCharacters = "コウベエキ"
+    Range("C19").Select
+    ActiveCell.FormulaR1C1 = "三河田原駅"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ミカワ"
+    ActiveCell.Characters(3, 3).PhoneticCharacters = "タハラエキ"
+    
+    Range("G4").Select
+    ActiveCell.FormulaR1C1 = "木造"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "モクゾウ"
+    Range("G5").Select
+    ActiveCell.FormulaR1C1 = "軽量鉄骨"
+    ActiveCell.Characters(1, 4).PhoneticCharacters = "ケイリョウテッコツ"
+    Range("G6").Select
+    ActiveCell.FormulaR1C1 = "鉄骨"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "テッコツ"
+    Range("G7").Select
+    ActiveCell.FormulaR1C1 = "鉄筋コン"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "テッキン"
+    Range("G8").Select
+    ActiveCell.FormulaR1C1 = "鉄骨鉄筋"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "テッコツ"
+    Range("G9").Select
+    ActiveCell.FormulaR1C1 = "プレコン"
+    ActiveCell.Characters(1, 4).PhoneticCharacters = "プレコン"
+    Range("G10").Select
+    ActiveCell.FormulaR1C1 = "その他"
+    ActiveCell.Characters(1, 3).PhoneticCharacters = "ソノタ"
+    
+    Range("H3").Select
+    ActiveCell.FormulaR1C1 = "番号"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "バンゴウ"
+    Range("H4").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("H5").Select
+    ActiveCell.FormulaR1C1 = "2"
+    Range("H6").Select
+    ActiveCell.FormulaR1C1 = "3"
+    Range("H7").Select
+    ActiveCell.FormulaR1C1 = "4"
+    Range("H8").Select
+    ActiveCell.FormulaR1C1 = "5"
+    Range("H9").Select
+    ActiveCell.FormulaR1C1 = "6"
+    Range("H10").Select
+    ActiveCell.FormulaR1C1 = "7"
+
+    Range("J3").Select
+    ActiveCell.FormulaR1C1 = "番号"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "バンゴウ"
+    Range("J4").Select
+    ActiveCell.FormulaR1C1 = "0"
+    Range("J5").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("J4:J5").Select
+    Selection.AutoFill Destination:=Range("J4:J12"), Type:=xlFillDefault
+    Range("J4:J12").Select
+    
+    Range("K4").Select
+    ActiveCell.FormulaR1C1 = "-"
+    Range("K5").Select
+    ActiveCell.FormulaR1C1 = "東"
+    ActiveCell.Characters(1, 1).PhoneticCharacters = "ヒガシ"
+    Range("K6").Select
+    ActiveCell.FormulaR1C1 = "南東"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ナントウ"
+    Range("K7").Select
+    ActiveCell.FormulaR1C1 = "南"
+    ActiveCell.Characters(1, 1).PhoneticCharacters = "ミナミ"
+    Range("K8").Select
+    ActiveCell.FormulaR1C1 = "南西"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ナンセイ"
+    Range("K9").Select
+    ActiveCell.FormulaR1C1 = "西"
+    ActiveCell.Characters(1, 1).PhoneticCharacters = "ニシ"
+    Range("K10").Select
+    ActiveCell.FormulaR1C1 = "北西"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ホクセイ"
+    Range("K11").Select
+    ActiveCell.FormulaR1C1 = "北"
+    ActiveCell.Characters(1, 1).PhoneticCharacters = "キタ"
+    Range("K12").Select
+    ActiveCell.FormulaR1C1 = "北東"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ホクトウ"
+    
+ 
+    Sheets("オリジナルデータ").Select
+    Rows("1:1").Select
+    Selection.Copy
+    Sheets("処理例").Select
+    Rows("1:1").Select
+    ActiveSheet.Paste
+    
+    Range("A2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(オリジナルデータ!RC=""新豊橋駅"",オリジナルデータ!RC=""駅前大通駅"",オリジナルデータ!RC=""駅前駅"",オリジナルデータ!RC=""新川駅"",オリジナルデータ!RC=""運動公園前駅"",オリジナルデータ!RC=""豊橋公園前駅"",オリジナルデータ!RC=""船町駅"",オリジナルデータ!RC=""下地駅""),""豊橋駅"",IF(OR(オリジナルデータ!RC=""津島駅"",オリジナルデータ!RC=""""),""豊島駅"",IF(オリジナルデータ!RC=""東田坂上駅"",""柳生橋駅"",オリジナルデータ!RC)))"
+        Range("B2").Select
+    ActiveCell.FormulaR1C1 = "=オリジナルデータ!RC"
+    Range("C2").Select
+    ActiveCell.FormulaR1C1 = "=オリジナルデータ!RC"
+    Range("D2").Select
+    ActiveCell.FormulaR1C1 = "=IF(オリジナルデータ!RC=""-"",""0万円"",オリジナルデータ!RC)"
+    Range("E2").Select
+    ActiveCell.FormulaR1C1 = "=IF(オリジナルデータ!RC=""-"",""0万円"",オリジナルデータ!RC)"
+    Range("F2").Select
+    ActiveCell.FormulaR1C1 = "=IF(オリジナルデータ!RC=""-"",""0万円"",オリジナルデータ!RC)"
+    Range("G1").Select
+    ActiveCell.FormulaR1C1 = "償却"
+    Range("G2").Select
+    ActiveCell.FormulaR1C1 = "=IF(オリジナルデータ!RC[1]=""-"",""0万円"",オリジナルデータ!RC[1])"
+    Range("H1").Select
+    ActiveCell.FormulaR1C1 = "管理費共益費"
+    Range("H2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(オリジナルデータ!RC[-1]=""-"",オリジナルデータ!RC[-1]=""-?※定期借家"",オリジナルデータ!RC[-1]=""- ※定期借家""),""0円"",オリジナルデータ!RC[-1])"
+    
+    Range("I2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(オリジナルデータ!RC=""-"",オリジナルデータ!RC=""付無料"",オリジナルデータ!RC=""付無料/駐2台可"",,オリジナルデータ!RC=""駐2台可""),""0円"",オリジナルデータ!RC)"
+
+    Columns("J:K").Select
+    Selection.Delete Shift:=xlToLeft
+    ActiveWindow.ScrollColumn = 2
+    
+    Range("J2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=RIGHT(オリジナルデータ!RC[2],LEN(オリジナルデータ!RC[2])-FIND(""県"",オリジナルデータ!RC[2]))"
+
+    Range("K2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=RIGHT(オリジナルデータ!RC[2],LEN(オリジナルデータ!RC[2])*FIND(RC[-10],オリジナルデータ!RC[2]))"
+    Range("L2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=RIGHT(オリジナルデータ!RC[2],LEN(オリジナルデータ!RC[2])*FIND(RC[-11],オリジナルデータ!RC[2]))"
+    
+    Range("M2").Select
+    ActiveCell.FormulaR1C1 = "=VLOOKUP(オリジナルデータ!RC[2],用語!R4C7:R10C8,2,FALSE)"
+
+    Range("N2").Select
+    ActiveCell.FormulaR1C1 = "=YEAR(オリジナルデータ!RC[2])"
+    Range("O2").Select
+    ActiveCell.FormulaR1C1 = "=VALUE(SUBSTITUTE(オリジナルデータ!RC[2],""m2"",""""))"
+    
+    Range("P2").Select
+    ActiveCell.FormulaR1C1 = "=オリジナルデータ!RC[2]"
+    Range("Q2").Select
+    ActiveCell.FormulaR1C1 = "=オリジナルデータ!RC[2]"
+    
+    Range("R2").Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range("A2:Q3400").Select
+    Range("R2").Activate
+    
+    Selection.DataSeries Rowcol:=xlColumns, Type:=xlAutoFill, Date:=xlDay, _
+        Trend:=False
+    
+End Sub
