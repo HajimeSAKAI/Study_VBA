@@ -1,0 +1,116 @@
+Sub 色塗りマクロ()
+'
+' 色塗りマクロ Macro
+'
+
+'
+    Cells.Select
+    Range("E3").Activate
+    
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=0.2"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16383844
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 13551615
+        .TintAndShade = 0
+    End With
+    
+    
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=0.3"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16751204
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 10284031
+        .TintAndShade = 0
+    End With
+    
+    
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=0.5"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16752384
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 13561798
+        .TintAndShade = 0
+    End With
+    
+    
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=0.7"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorAccent1
+        .TintAndShade = 0
+    End With
+    
+    
+    Selection.FormatConditions(1).StopIfTrue = False
+    ActiveWindow.SmallScroll Down:=-3
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=0.8"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16383844
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 13551615
+        .TintAndShade = 0
+    End With
+    
+    
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=0.8"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 5296274
+        .TintAndShade = 0
+    End With
+    
+    
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=0.9"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+    End With
+    
+    
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=1"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    
+    
+    Selection.FormatConditions(1).StopIfTrue = False
+    Range("K12").Select
+End Sub
