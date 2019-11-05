@@ -1,3 +1,5 @@
+'"-"を除外せずにミスを防ぐ
+
 '一番最初の設定でミスしていると全てやり直しになるので注意
     Range("J3").Select
     ActiveCell.FormulaR1C1 = "番号"
@@ -12,34 +14,34 @@
 'エクセルの特性を十分理解することが大事
     Range("J4:J5").Select
     Selection.AutoFill Destination:=Range("J4:J12"), Type:=xlFillDefault
-    Range("J4:J12").Select
+    Range("J4:J11").Select
     
 'Vlookup関数の特性は，細かいものでも合致したらそれを本質として認識する
 'だから，大きいものから変換していく！(乱雑にならないように！)
-    Range("K4").Select
+    Range("K4").Seect
     ActiveCell.FormulaR1C1 = "-"
-    Range("K5").Select
+    Range("K4").Select
     ActiveCell.FormulaR1C1 = "北東"
-    ActiveCell.Characters(1, 1).PhoneticCharacters = "ヒガシ"
-    Range("K6").Select
+    ActiveCell.Characters(1, 1).PhoneticCharacters = "ホクトウ"
+    Range("K5").Select
     ActiveCell.FormulaR1C1 = "南東"
     ActiveCell.Characters(1, 2).PhoneticCharacters = "ナントウ"
-    Range("K7").Select
+    Range("K6").Select
     ActiveCell.FormulaR1C1 = "北西"
-    ActiveCell.Characters(1, 1).PhoneticCharacters = "ミナミ"
-    Range("K8").Select
+    ActiveCell.Characters(1, 1).PhoneticCharacters = "ホクセイ"
+    Range("K7").Select
     ActiveCell.FormulaR1C1 = "南西"
     ActiveCell.Characters(1, 2).PhoneticCharacters = "ナンセイ"
-    Range("K9").Select
+    Range("K8").Select
     ActiveCell.FormulaR1C1 = "北"
-    ActiveCell.Characters(1, 1).PhoneticCharacters = "ニシ"
-    Range("K10").Select
-    ActiveCell.FormulaR1C1 = "東"
-    ActiveCell.Characters(1, 2).PhoneticCharacters = "ホクセイ"
-    Range("K11").Select
-    ActiveCell.FormulaR1C1 = "南"
     ActiveCell.Characters(1, 1).PhoneticCharacters = "キタ"
-    Range("K12").Select
+    Range("K9").Select
+    ActiveCell.FormulaR1C1 = "東"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ヒガシ"
+    Range("K10").Select
+    ActiveCell.FormulaR1C1 = "南"
+    ActiveCell.Characters(1, 1).PhoneticCharacters = "ミナミ"
+    Range("K11").Select
     ActiveCell.FormulaR1C1 = "西"
-    ActiveCell.Characters(1, 2).PhoneticCharacters = "ホクトウ"
+    ActiveCell.Characters(1, 2).PhoneticCharacters = "ニシ"
     
